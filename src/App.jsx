@@ -52,7 +52,14 @@ const [current,setCurrent] =useState(0)
       </div>
     /* <AppCard title={language.title} description={language.description} key={language.id}/> */
     ))}
-    {languages[current].description}  
+    <div className='container'>
+      <div className='row'>
+        <div className='col'>
+          <h1>{languages[current].title}</h1>
+          <p>{languages[current].description}</p>
+        </div>
+      </div>
+    </div> 
     </>
   )
 }
