@@ -1,4 +1,4 @@
-
+import AppCard from './components/AppCard'
 import './App.css'
 
 const languages = [
@@ -41,15 +41,28 @@ function App() {
 
   return (
     <>
+    
       <h1>LEARN WEB DEVELOPMENT</h1>
 
-      <button>HTML</button>
-      <button>CSS</button>
-      <button>JavaScript</button>
-      <button>Node.js</button>
-      <button>Express</button>
-      <button>ReactJS</button>
+      <div className='buttons'>
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+        <button>Node.js</button>
+        <button>Express</button>
+        <button>ReactJS</button>
+      </div>
+
+      <div className='container'>
+        <div className='row'>
+          {languages.map(language=>(
+            <AppCard title={language.title} descriprion={language.description} key={language.id}/>
+          ))}
+        </div>
+      </div>
     </>
+
+
   )
 }
 
