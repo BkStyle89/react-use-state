@@ -56,7 +56,7 @@ function App() {
       <div className='container'>
         <div className='row'>
           {languages.map(language=>(
-            <AppCard title={language.title} descriprion={language.description} key={language.id}/>
+            <AppCard title={language.title} description={language.description} key={language.id}/>
           ))}
         </div>
       </div>
