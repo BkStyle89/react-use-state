@@ -46,12 +46,12 @@ const [current,setCurrent] =useState(0)
   return (
     <>
     <h1>LEARN WEB DEVELOPMENT</h1> 
+    <div className='buttons'>
     {languages.map((language,index)=>(
-      <div>
             <button onClick={()=>setCurrent(index) }>{language.title}</button>
-      </div>
-    /* <AppCard title={language.title} description={language.description} key={language.id}/> */
-    ))}
+            /* <AppCard title={language.title} description={language.description} key={language.id}/> */
+          ))}
+    </div>
     <div className='container'>
       <div className='row'>
         <div className='col'>

@@ -1,9 +1,23 @@
 .container{
-    border: solid 2px black;
+    border: solid 1px lightslategray;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+   
 }
 button{
     margin: 10px;
-    padding: 10px;
-    display: flex;
+    padding: 10px; 
+    font-weight: 700;
+    color: white;
+    background-color: rgb(51, 124, 243);
+    border-radius: 10px;
+    border: none;
     
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
