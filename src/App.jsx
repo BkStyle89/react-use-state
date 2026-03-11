@@ -1,4 +1,5 @@
-import AppCard from './components/AppCard'
+import {useState} from 'react'
+
 import './App.css'
 
 const languages = [
@@ -37,32 +38,22 @@ console.log(languages);
 
 
 function App() {
-  
+
+
+const [current,setCurrent] =useState(0)
+
 
   return (
     <>
-    
-      <h1>LEARN WEB DEVELOPMENT</h1>
-
-      <div className='buttons'>
-        <button>HTML</button>
-        <button>CSS</button>
-        <button>JavaScript</button>
-        <button>Node.js</button>
-        <button>Express</button>
-        <button>ReactJS</button>
+    <h1>LEARN WEB DEVELOPMENT</h1> 
+    {languages.map((language,index)=>(
+      <div>
+            <button onClick={()=>setCurrent(index) }>{language.title}</button>
       </div>
-
-      <div className='container'>
-        <div className='row'>
-          {languages.map(language=>(
-            <AppCard title={language.title} description={language.description} key={language.id}/>
-          ))}
-        </div>
-      </div>
+    /* <AppCard title={language.title} description={language.description} key={language.id}/> */
+    ))}
+    {languages[current].description}  
     </>
-
-
   )
 }
 
