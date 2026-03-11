@@ -14,10 +14,19 @@ button{
     border-radius: 10px;
     border: none;
     
+    
 }
 
 .buttons{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-bottom: 30px;
 }
+
+button:hover{
+    background-color: yellow;
+    color: black;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
